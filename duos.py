@@ -157,10 +157,8 @@ def loguenado_cuenta(imagen, username, password, certeza=0.8, intentos=10):
     exit()  # Terminar el programa
 
 # Información de la cuenta
-username = ["ventas0001","ventas0002","ventas0003","ventas0004",
-           "ventas0005","ventas0006","ventas0007","ventas0008",
-           "ventas0009","ventas0010"]
-password = "1234"
+username = ["colocar usuario"]
+password = "colocar contraseña"
 for i in username:
     print(f"logueando {i}")
     # Paso 1: Abrir el juego
@@ -215,54 +213,7 @@ for i in username:
     time.sleep(2)
     buscar_tiendaoffline = click_derecha_del_centro(offlineShop, 0.8, 95)
 
-# Información de la cuenta
-usernameAden = ["ventas0011","ventas0012","ventas0013","ventas0014",
-           "ventas0015","ventas0016","ventas0017","ventas0018",
-           "ventas0019","ventas0020"]
-password = "1234"
-for i in usernameAden:
-   print(f"logueando {i}")
-    # Paso 1: Abrir el juego
-    subprocess.Popen(game, shell=True)
-    print("abriendo el juego")
-    time.sleep(10)
 
-    # Logueo
-    logueo_exitoso = loguenado_cuenta(login, i, password, 0.8, 5)
-    time.sleep(2)
-    buscar_login = buscar_elemento(log, "Loguin", 0.8, 5)
-    time.sleep(2)
-    buscar_agree = buscar_elemento(agree, "Agree", 0.8, 5)
-    time.sleep(2)
-    buscar_ok = buscar_elemento(ok, "Boton OK", 0.8, 5)
-    time.sleep(2)
-    buscar_starlog = buscar_elemento(starlog, "Boton Star", 0.8, 5)
-    time.sleep(10)
-
-    # Enviar mensaje y comprar
-    pyautogui.write("/buy")
-    pyautogui.press("enter")
-    time.sleep(2)
-    comprar_sepu = compra_iten(sepu)
-    time.sleep(2)
-    pyautogui.write("100000")
-    time.sleep(2)
-    buscar_confirm = buscar_elemento(confirm, "Boton Confirm", 0.8, 5)
-    time.sleep(2)
-    pyautogui.write("50")
-    time.sleep(2)
-    buscar_confirm = buscar_elemento(confirm, "Boton Confirm", 0.8, 5)
-    time.sleep(2)
-    poner_mensaje = mensaje(message, 0.8, 5)
-    time.sleep(2)
-    buscar_confirm = buscar_elemento(confirm, "Boton Confirm", 0.8, 5)
-    time.sleep(2)
-    compra = comenzar_compra(star, 0.8, 5)
-    time.sleep(2)
-    pyautogui.write(".menu")
-    pyautogui.press("enter")
-    time.sleep(2)
-    buscar_tiendaoffline = click_derecha_del_centro(offlineShop, 0.8, 95)
 
 
 
